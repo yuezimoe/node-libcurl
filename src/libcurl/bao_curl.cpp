@@ -59,6 +59,7 @@ void BaoCurl::init()
 	CHECK_CURLOK(curl_easy_setopt(this->m_pCURL, CURLOPT_COOKIEFILE, NULL));
 	CHECK_CURLOK(curl_easy_setopt(this->m_pCURL, CURLOPT_PRIVATE, this));
 	CHECK_CURLOK(curl_easy_setopt(this->m_pCURL, CURLOPT_FORBID_REUSE, 1));
+	printf("CURLOPT_FORBID_REUSE -> 1!\n");
 	this->setTimeout(15, 15);
 }
 
