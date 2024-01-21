@@ -50,6 +50,7 @@ switch (platform) {
 
     case 'darwin':
         switch (arch) {
+            case 'arm64':
             case 'x64':
                 try {
                     nativeBinding = require('@ossiana/node-libcurl-darwin-x64');
@@ -58,7 +59,6 @@ switch (platform) {
                 }
 
                 break;
-
             default:
                 throw new Error(`Unsupported architecture on macOS: ${arch}`);
         }
