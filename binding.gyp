@@ -85,10 +85,11 @@
                         },
                     },
                  'libraries': [
-                              "-Wl,-ld_classic"
                               "/System/Library/Frameworks/CoreFoundation.framework",
                               "/System/Library/Frameworks/SystemConfiguration.framework",
-                              "<(module_root_dir)/lib/Release/darwin-arm64/libcurl.a"
+                              "<(module_root_dir)/lib/Release/darwin-arm64/libcurl.a",
+                              "<(module_root_dir)/lib/Release/darwin-arm64/libssl.a",
+                              "<(module_root_dir)/lib/Release/darwin-arm64/libcrypto.a"
                           ],
                           'xcode_settings': {
                               'GCC_ENABLE_CPP_EXCEPTIONS': 'YES',
