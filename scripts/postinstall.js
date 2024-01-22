@@ -72,7 +72,7 @@ switch (platform) {
         switch (arch) {
             case 'x64':
                 try {
-                    nativeBinding = require('@ossiana/node-libcurl-linux-x64-gnu');
+                    nativeBinding = require('@ossiana/node-libcurl/');
                 } catch (e) {
                     loadError = e;
                 }
