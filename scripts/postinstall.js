@@ -71,19 +71,12 @@ switch (platform) {
     case 'linux':
         switch (arch) {
             case 'x64':
-                if (isMusl()) {
-                    throw new Error(`Unsupported architecture on Linux: ${arch} musl`);
-                } else {
-                    try {
-                        nativeBinding = require('@ossiana/node-libcurl-linux-x64-gnu');
-                    } catch (e) {
-                        loadError = e;
-                    }
+                try {
+                    nativeBinding = require('@ossiana/node-libcurl-linux-x64-gnu');
+                } catch (e) {
+                    loadError = e;
                 }
-
-                break;
-
-            default:
+                break;            default:
                 throw new Error(`Unsupported architecture on Linux: ${arch}`);
         }
 
